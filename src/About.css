@@ -1,0 +1,59 @@
+.about__header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem;
+  margin: 1rem;
+
+  font-size: 1rem;
+}
+
+.about__details {
+  font-family: sans-serif;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 5px;
+
+  margin: 0.5rem;
+
+  background-color: white;
+}
+
+.about__details:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.about__summary {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+
+  color: #1D3557;
+}
+
+.about__info {
+  overflow-wrap: break-word;
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+    
+  background-color: #D9D0C1;
+}
+
+.about__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}

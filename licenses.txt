@@ -1,0 +1,94 @@
+** Test image URL
+- Use this link is to test the image URL field when adding a new product:
+https://images.unsplash.com/photo-1612541831162-96d8fe7558f9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+License Information:
+https://unsplash.com/license
+
+--Logo from--
+file name: logo.png
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu_book:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=book&icon.size=50&icon.color=%238C775D
+
+License Information:
+https://github.com/google/material-design-icons/blob/master/LICENSE
+
+
+--Account Icon from--
+file name: account.png
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:account_circle:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=account&icon.size=90&icon.color=%23487367
+
+License Information:
+https://github.com/google/material-design-icons/blob/master/LICENSE
+
+
+--Cart Icon from--
+Image file name: cart.png
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:shopping_cart:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=cart&icon.size=90&icon.color=%23000000
+
+License Information:
+https://github.com/google/material-design-icons/blob/master/LICENSE
+
+
+--Cancel Icon from--
+Image file name: cancel.png
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:cancel:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=x&icon.size=50&icon.color=%23000000
+
+License Information:
+https://github.com/google/material-design-icons/blob/master/LICENSE
+
+
+--Book images from--
+
+* Business Strategy:
+1.Image file name: book_company_of_one.png
+https://unsplash.com/photos/a-copy-of-the-book-company-of-one-by-paul-jarviss-ViMrMawjj7s
+
+License Information:
+https://unsplash.com/license
+
+2.Image file name: book_the_psychology_of_money
+https://unsplash.com/photos/aZ_MmSmAcjg
+
+License Information:
+https://unsplash.com/license
+
+* Fiction:
+3.Image file name: book_the_picture_of_dorian_gray
+https://unsplash.com/photos/a-picture-of-a-book-on-a-red-cloth-1i-P178kxHQ
+
+License Information:
+https://unsplash.com/license
+
+4.Image file name: book_the_fine_print
+https://unsplash.com/photos/a-book-sitting-on-top-of-a-wooden-table-6gjiUmp2k_8
+
+License Information:
+https://unsplash.com/license
+
+
+* Non-ficion
+5.Image file name: book_design_anthology
+https://unsplash.com/photos/design-anthology-book-e-5DieY8snc
+
+License Information:
+https://unsplash.com/license
+
+6.Image file name: book_deep_work
+https://unsplash.com/photos/a-book-on-a-table-next-to-a-cup-of-coffee-6syqQekKhWs
+
+License Information:
+https://unsplash.com/license
+
+
+* Fantasy
+7.Image file name:book_the_chronicles_of_narnia
+https://unsplash.com/photos/a-blue-book-with-a-picture-of-a-man-walking-through-the-woods-xG5VJW-7Bio
+
+License Information:
+https://unsplash.com/license
+
+8.Image file name: book_the_two_towers
+https://unsplash.com/photos/a-book-sitting-on-top-of-a-wooden-table-next-to-a-pool-O7ygzpAL4Mc
+
+License Information:
+https://unsplash.com/license

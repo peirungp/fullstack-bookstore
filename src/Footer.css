@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 5px solid #8C775D;
+
+  padding: 0.5rem;
+    
+  background-color: var(--banner-clr);
+}
+
+.footer__copyright {
+  margin:0;
+
+  font-size: 0.9rem;
+}

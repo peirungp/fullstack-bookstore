@@ -1,0 +1,60 @@
+.update__product__form {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.update__product__form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.update__product__form label::before {
+  content: '*';
+  color: red;
+  position: relative;
+  top: 16px;
+
+  font-size: 1.2rem;
+}
+
+.update__product__form input,
+.update__product__form textarea {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.update__product__form textarea {
+  height: 100px;
+}
+
+.genre__select {
+  width: 300px;
+  height: 23px;
+}
+
+.buttons_container {
+  position: relative;
+  display: flex;
+  right: 1rem;
+}
+.update__save,
+.update__cancel {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .update__save,
+  .update__cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+

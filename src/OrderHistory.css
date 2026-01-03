@@ -1,0 +1,167 @@
+.order__history__container {
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+.order__history__container {
+    padding: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.order__history__title {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.order__items__list {
+    list-style: none;
+}
+
+.order__item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.order__item__details__right {
+    text-align: right;
+}
+
+.order__item__details {
+    flex: 1;
+}
+
+.no__orders__message {
+    text-align: center;
+    color: #666;
+    padding: 0.5rem;
+}
+
+.order__card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.order__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.25rem;
+    cursor: pointer;
+}
+
+.order__summary:hover {
+    background: #f9f9f9;
+}
+
+.order__details {
+    margin: 1.5rem;
+}
+
+.summary__left h3 {
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.order__date {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.summary__right {
+    text-align: right;
+}
+
+.order__total {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c5f2d;
+}
+
+.order__details {
+    padding: 1.5rem 1.25rem;
+    border-top: 1px solid #e0e0e0;
+    background: #fafafa;
+}
+
+.order__details h4 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.order__items__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order__item {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.order__item__image {
+    width: 70px;    
+    height: 75px;
+}
+
+.item__title {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.item__author {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.order__item__pricing {
+    text-align: right;
+}
+
+.item__qty {
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.order__item__price {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c5f2d;
+}
+
+@media (max-width: 768px) {
+    .order__summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .summary__right {
+        align-self: flex-end;
+    }
+    
+    .order__item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .order__item__image {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+    }
+}

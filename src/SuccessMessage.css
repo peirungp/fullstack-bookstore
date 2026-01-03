@@ -1,0 +1,19 @@
+.success__message__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: #DEEFE7;
+}
+
+.success__message {
+  font-size: 0.9rem;
+  
+  color: #487367;
+}
+
+.success__message__icon {
+  width: 20px;
+  height: 20px;
+  margin: 0.5rem;
+}

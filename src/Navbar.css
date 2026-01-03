@@ -1,0 +1,118 @@
+.menu__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem; 
+  width: 100%;
+  justify-content: flex-start;
+
+  padding: 0.5rem;
+  margin: 0.5rem;  
+
+  font-size: 1.2rem;
+}
+
+.menu__item, 
+.account__menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+
+  padding: 0.5rem;
+
+  font-weight: bold;
+
+  color: #487367;
+
+}
+
+.menu__item a {
+  text-decoration: none;
+  white-space: nowrap;
+
+  color: #487367;
+}
+
+.menu__item:hover {
+  border-radius: 1rem;
+}
+
+.menu__link{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #487367;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s;
+}
+
+.menu__link:after, 
+.account__button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #487367;
+  transition: width 0.3s ease;
+}
+
+.menu__link:hover::after, 
+.account__button:hover::after {
+  width: 100%;
+}
+
+.account__dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  min-width: 160px;
+  opacity: 0;
+  border: none;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.account__menu:hover .account__dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.account__button {
+  display: flex;
+  align-items: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  
+  padding: 0.9rem 0.75rem;
+  gap: 0.5rem;
+
+  color: #487367;
+
+  background: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.account__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.account__arrow  {
+  transition: transform 0.3s ease;
+}
+
+.account__arrow.open {
+  transform: rotate(180deg);
+}
+
+.cart__menu {
+  margin-left: 1.5rem;
+}

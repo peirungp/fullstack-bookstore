@@ -1,0 +1,31 @@
+/* .personal__info__container {
+  max-width: 600px;
+  margin: 0 auto;
+} */
+
+.manage__account__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.manage__account__label span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+.manage__account__label input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.manage__account__email {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+

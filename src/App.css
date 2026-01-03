@@ -1,0 +1,19 @@
+
+.header, .main {  
+  text-align: center; 
+}
+
+.header__container {
+  border-bottom: 5px solid #8C775D;
+  border-width: 5px 10px 7px 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;;
+}
+
+.main__area {
+  flex: 1;
+}
