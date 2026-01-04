@@ -3,8 +3,16 @@ import db from './db.js';
 async function getProductsFromDB() {
   const [rows] = await db.execute('SELECT * FROM products');
   return rows.map(row => ({
-    ...row,
-    price: Number(row.price)
+    id: row.id,
+    title: row.title,
+    author: row.author,
+    genre: row.genre,
+    image: row.image,
+    alt: row.alt,
+    text: row.text,
+    price: Number(row.price),
+    isBestSeller: row.is_best_seller === 1,
+    salesCount: row.sales_count
   }));
 }
 

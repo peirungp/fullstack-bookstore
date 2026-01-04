@@ -42,7 +42,10 @@
   position: relative;
   display: flex;
   right: 1rem;
+
+  margin-top: 1rem;
 }
+
 .update__save,
 .update__cancel {
   width: 120px;
