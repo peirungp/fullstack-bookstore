@@ -11,7 +11,7 @@ async function getProductsFromDB() {
 async function addProductToDB(product) {
   const { title, author, genre, image, alt, text, price, isBestSeller, salesCount } = product;
   const [result] = await db.query(
-    'INSERT INTO products (title, author, genre, image, alt, text, price, isBestSeller, salesCount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+    'INSERT INTO products (title, author, genre, image, alt, text, price, is_best_seller, sales_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
     [title, author, genre, image, alt, text, price, isBestSeller || false, salesCount || 0]
   );
   return result.insertId;
