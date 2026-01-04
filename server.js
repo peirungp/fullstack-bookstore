@@ -306,7 +306,8 @@ app.get('/api/v1/products', async (req, res) => {
 });
 
 app.post('/api/v1/products', upload.single('image'), async (req, res) => {
-  const sid = req.cookies.sid;
+  try {
+    const sid = req.cookies.sid;
   const email = sid ? sessions.getSessionUser(sid) : '';
   
   if(!sid) {
@@ -352,6 +353,12 @@ app.post('/api/v1/products', upload.single('image'), async (req, res) => {
   });
   const allProduct = await products.getProductsFromDB();
   res.json(allProduct);  
+
+  } catch (error) {
+    console.error('Error adding product:', error);
+    res.status(500).json({ error: 'internal-server-error', message: error.message });
+    return;
+  }
 });
 
 
