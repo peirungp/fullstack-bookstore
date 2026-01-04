@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { LOGIN_STATUS } from './setting';
-import './NavBar.css';
+import './Navbar.css';
 import menu from './menu';
 
-function NavBar({ navigateTo, loginStatus, onLogout }) {
+function Navbar({ navigateTo, loginStatus, onLogout }) {
 
   const [dropdownOpen, setIsDropdownOpen] = useState(false);
   
@@ -87,4 +87,4 @@ function NavBar({ navigateTo, loginStatus, onLogout }) {
   );
 }
 
-export default NavBar;
+export default Navbar;
