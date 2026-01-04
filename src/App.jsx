@@ -27,7 +27,7 @@ import About from './About';
 import Footer from './Footer';
 import RegisterForm from './RegisterForm';
 import ErrorMessage from './ErrorMessage';
-import Spinner from './spinner';
+import Spinner from './Spinner';
 import Products from './Products';
 import Cart from './Cart';
 import ManageAccount from './manageAccount.jsx';
