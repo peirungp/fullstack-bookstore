@@ -30,7 +30,7 @@ import ErrorMessage from './ErrorMessage';
 import Spinner from './Spinner';
 import Products from './Products';
 import Cart from './Cart';
-import ManageAccount from './manageAccount.jsx';
+import ManageAccount from './ManageAccount.jsx';
 
 function App() {
     

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './OrderHistory.css';
 import { fetchOrder } from './services';
-import Spinner from './spinner';
 import { FORM } from './setting';
 import { ERRORLIST } from './setting';
 import ErrorMessage from './ErrorMessage';
