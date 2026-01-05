@@ -9,6 +9,7 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [localError, setLocalError] = useState('');
+  const [clearError, setClearError] = useState(false);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -19,6 +20,7 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
     }
 
     setLocalError('');
+    setClearError(false);
     onLogin(email, password);
   }
 
@@ -34,6 +36,8 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
     }
   }
 
+  const displayError = localError || (clearError ? '' : error);
+
   return (
     <div className="login__overlay" onClick={handleOverlayClick}>
       <div className="login__modal" onSubmit={onSubmit}>
@@ -41,7 +45,7 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
         <form className="login__form" onSubmit={onSubmit}>
           <img src="/images/account.png" alt="An icon of a person inside a circle" className="account-icon"/>
           <h1 className="login__title">Sign In</h1>
-          {(localError || error) && <ErrorMessage error={localError || error} />}
+          {displayError && <ErrorMessage error={displayError} />}
           <label className="login__label">
             <span>Email:</span>
             <input 
@@ -49,7 +53,8 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
               value={email} 
               onChange={e => {
                 setEmail(e.target.value);
-                if (error) setLocalError('');
+                setLocalError('');
+                setClearError(true);
               }}
             />
         </label>
@@ -59,8 +64,9 @@ function LoginForm({ onLogin, navigateTo, onClose, error }) {
               value={password} 
               onChange={e => {
                 setPassword(e.target.value);
-                  if (error) setLocalError('');
-                }}
+                setLocalError('');
+                setClearError(true);
+              }}
             />  
         </label>
         <Button 

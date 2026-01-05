@@ -13,6 +13,7 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [localError, setLocalError] = useState('');
+  const [clearError, setClearError] = useState(false);
 
   function validPassword(password) {
     if (password.length < 6 || password.length > 16) {
@@ -42,6 +43,7 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
     const passwordError = validPassword(password);
     if (passwordError) {
       setLocalError(passwordError);
+      setClearError(false);
       return;
     }
 
@@ -51,6 +53,7 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
     }
 
     setLocalError('');
+    setClearError(false);
     onRegister(email, password, firstName, lastName);
   }
 
@@ -65,6 +68,8 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
     if (onClose) onClose();
     navigateTo('/login');
   }
+
+  const displayError = localError || (clearError ? '' : error);
  
   return (
     <div>
@@ -74,7 +79,7 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
           <form className="login__form" onSubmit={onSubmit}>
           <img src="/images/account.png" alt="An icon of a person inside a circle" className="account-icon"/>
           <h1 className="login__title">Create an Account</h1>
-          {error && <ErrorMessage error={error} />}
+          {displayError && <ErrorMessage error={displayError} />}
           <label className="login__label">
             <span>First Name:</span>
             <input 
@@ -82,7 +87,8 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
               value={firstName} 
               onChange={e => {
                 setFirstName(e.target.value);
-                if (localError) setLocalError('');
+                setLocalError('');
+                setClearError(true);
               }}
             />
         </label>
@@ -93,7 +99,8 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
               value={lastName} 
               onChange={e => {
                 setLastName(e.target.value);
-                if (localError) setLocalError('');
+                setLocalError('');
+                setClearError(true);
               }}
             />
         </label>
@@ -104,7 +111,8 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
               value={email} 
               onChange={e => {
                 setEmail(e.target.value);
-                if (localError) setLocalError('');
+                setLocalError('');
+                setClearError(true);
               }}
             />
         </label>
@@ -114,7 +122,8 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
               value={password} 
               onChange={e => {
                 setPassword(e.target.value);
-                if (localError) setLocalError('');
+                setLocalError('');
+                setClearError(true);
               }}
             /> 
         </label>
@@ -124,8 +133,9 @@ function RegisterForm({ onRegister, onClose, navigateTo, error }) {
               value={confirmPassword} 
               onChange={e => {
                 setConfirmPassword(e.target.value);
-                  if (localError) setLocalError('');
-                }}
+                setLocalError('');
+                setClearError(true);
+              }}
             />
         </label>
         <Button 
