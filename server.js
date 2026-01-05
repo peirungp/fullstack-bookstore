@@ -83,6 +83,7 @@ app.post('/api/v1/session', async (req, res) => {
   res.cookie('sid', sid);
 
   const userCart = await users.getCart(email);
+  
   res.json({ email, firstName: userData.firstName || 'Admin', lastName: userData.lastName, phone: userData.phone, address: userData.address, isAdmin: userData.isAdmin === 1, cart: userCart });
 });
 
@@ -306,8 +307,7 @@ app.get('/api/v1/products', async (req, res) => {
 });
 
 app.post('/api/v1/products', upload.single('image'), async (req, res) => {
-  try {
-    const sid = req.cookies.sid;
+  const sid = req.cookies.sid;
   const email = sid ? sessions.getSessionUser(sid) : '';
   
   if(!sid) {
@@ -353,12 +353,6 @@ app.post('/api/v1/products', upload.single('image'), async (req, res) => {
   });
   const allProduct = await products.getProductsFromDB();
   res.json(allProduct);  
-
-  } catch (error) {
-    console.error('Error adding product:', error);
-    res.status(500).json({ error: 'internal-server-error', message: error.message });
-    return;
-  }
 });
 
 

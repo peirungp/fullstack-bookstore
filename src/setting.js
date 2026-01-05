@@ -54,6 +54,7 @@ export const ERRORLIST = {
   [FORM.PASSWORD_INVALID]: 'Password must be 8-16 characters and include at least one uppercase letter, one lowercase letter, one number, and one special character.',
   [FORM.IMAGE_REQUIRED]: 'Please upload an image.',
   [FORM.LOADING_FAILED]: 'Failed to load orders. Please try again.',
+  DEFAULT: 'An unexpected error occurred. Please try again later.',
 };
 
 

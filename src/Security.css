@@ -22,3 +22,9 @@
   border-radius: 4px;
   font-size: 1rem;
 }
+
+.security__label .password__toggle {
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 0px);
+}
