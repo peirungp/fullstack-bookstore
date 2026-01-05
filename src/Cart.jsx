@@ -96,14 +96,16 @@ function Cart({ cart, products, showCart, setShowCart, onUpdatedCart, onRemoveFr
                          <div className="cart__total">Total: ${totalPrice}</div>
                       ))}
                       {successMessage && <SuccessMessage message={successMessage} />}
-                      <Button 
+                      {(cartItems.length > 0 && (
+                        <Button 
                         type="button" 
                         visual="button" 
                         onClick={handleSuccessMessage}
                         className="checkout__button"
                       >
                         Checkout
-                      </Button>                            
+                      </Button>
+                      ))}                                     
             </div>                
             )}
       </div>

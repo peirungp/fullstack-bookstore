@@ -5,14 +5,14 @@ import ErrorMessage from './ErrorMessage';
 import { FORM } from './setting.js';
 import PasswordInput from './PasswordInput.jsx';
 
-function RegisterForm({ onRegister, onClose, navigateTo }) {
+function RegisterForm({ onRegister, onClose, navigateTo, error }) {
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+  const [localError, setLocalError] = useState('');
 
   function validPassword(password) {
     if (password.length < 6 || password.length > 16) {
@@ -29,27 +29,28 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
   function onSubmit(e) {
     e.preventDefault();
     if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
-      setError(FORM.REQUIRED_FILL_OUT);
+      setLocalError(FORM.REQUIRED_FILL_OUT);
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError(FORM.EMAIL_INVALID);
+      setLocalError(FORM.EMAIL_INVALID);
       return;
     }
 
     const passwordError = validPassword(password);
     if (passwordError) {
-      setError(passwordError);
+      setLocalError(passwordError);
       return;
     }
 
     if (password !== confirmPassword) {
-      setError(FORM.PASSWORD_MISMATCHING);
+      setLocalError(FORM.PASSWORD_MISMATCHING);
       return;
     }
 
+    setLocalError('');
     onRegister(email, password, firstName, lastName);
   }
 
@@ -81,7 +82,7 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
               value={firstName} 
               onChange={e => {
                 setFirstName(e.target.value);
-                if (error) setError('');
+                if (localError) setLocalError('');
               }}
             />
         </label>
@@ -92,7 +93,7 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
               value={lastName} 
               onChange={e => {
                 setLastName(e.target.value);
-                if (error) setError('');
+                if (localError) setLocalError('');
               }}
             />
         </label>
@@ -103,7 +104,7 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
               value={email} 
               onChange={e => {
                 setEmail(e.target.value);
-                if (error) setError('');
+                if (localError) setLocalError('');
               }}
             />
         </label>
@@ -113,7 +114,7 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
               value={password} 
               onChange={e => {
                 setPassword(e.target.value);
-                if (error) setError('');
+                if (localError) setLocalError('');
               }}
             /> 
         </label>
@@ -123,7 +124,7 @@ function RegisterForm({ onRegister, onClose, navigateTo }) {
               value={confirmPassword} 
               onChange={e => {
                 setConfirmPassword(e.target.value);
-                  if (error) setError('');
+                  if (localError) setLocalError('');
                 }}
             />
         </label>
