@@ -39,8 +39,7 @@
   border-radius: 1rem;
 }
 
-.menu__link__signout, 
-.menu__link__account {
+.menu__link{
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -48,10 +47,6 @@
   color: #487367;
   padding: 0.5rem 0.75rem;
   transition: color 0.2s;
-}
-
-.menu__link__signout {
-  border-bottom: none;
 }
 
 .menu__link:after, 
