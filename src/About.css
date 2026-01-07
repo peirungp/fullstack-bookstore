@@ -18,6 +18,25 @@
   font-size: 1rem;
 }
 
+.about__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.about__image {
+  height: auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.about__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .about__details {
   font-family: sans-serif;
   width: 80%;

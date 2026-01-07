@@ -39,7 +39,7 @@ function Navbar({ navigateTo, loginStatus, onLogout }) {
                 {loginStatus === LOGIN_STATUS.IS_LOGGED_IN ? (
                 <>
                   <button
-                    className="menu__link"
+                    className="menu__link__signout"
                     onClick={e => {
                     e.preventDefault(); 
                     onLogout();
@@ -48,7 +48,7 @@ function Navbar({ navigateTo, loginStatus, onLogout }) {
                     Sign Out
                   </button>
                   <button 
-                    className="menu__link"
+                    className="menu__link__account"
                     onClick={e => {
                       e.preventDefault();
                       navigateTo('/manage-account');

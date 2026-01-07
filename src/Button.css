@@ -16,9 +16,8 @@
 
 .button__primary {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 1rem;
-
 
   padding: 0.5rem;
   margin: 0.5rem;
@@ -29,8 +28,8 @@
 }
 
 .button__primary:hover {
-  background-color: #8C775D;
-  color: #F2F2F2;
+  background-color: #e8dfc7;
+  color: #5a6c57;
 }
 
 .button__link:hover {
