@@ -3,8 +3,8 @@ import './About.css';
 function About() {
   return (
     <div className="about">
-      <h2 className="about__header">About</h2>
       <div className="about__container">
+        <h2 className="about__header">About</h2>
         <div className="about__image__section">
           <img 
             className="about__image" 

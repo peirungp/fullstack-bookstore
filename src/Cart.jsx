@@ -12,9 +12,10 @@ function Cart({ cart, products, showCart, setShowCart, onUpdatedCart, onRemoveFr
     return null; 
   }
 
-  if(page === '/about') {
+  if(page === '/about' || page === '/manage-account') {
     return null;
   }
+  
 
   const cartItems = Object.keys(cart || {}).map(id => {
     const product = products.find(product => String(product.id) === String(id));
