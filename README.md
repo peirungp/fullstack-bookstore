@@ -140,6 +140,12 @@ https://fonts.google.com/icons?selected=Material+Symbols+Outlined:visibility_off
 License Information:
 https://github.com/google/material-design-icons/blob/master/LICENSE
 
+Image file name: about_bookspace.png
+https://unsplash.com/photos/library-photograph-I1oL89qxefc
+
+License Information:
+https://unsplash.com/license
+
 --Book images from--
 
 * Business Strategy:

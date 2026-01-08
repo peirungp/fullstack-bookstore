@@ -22,8 +22,12 @@
   display: grid;
   align-items: start;
   grid-template-columns: 400px 1fr;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .about__image {
