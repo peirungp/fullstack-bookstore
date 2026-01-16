@@ -34,8 +34,9 @@
 
 .about__content {
   display: flex;
-  align-items: start;
+  align-items: stretch;
   flex-direction: column;
+  width: 100%;
   gap: 2rem;
   
   margin-left: 2rem;
@@ -68,6 +69,7 @@
   padding: 1rem;
   margin: 0;
   text-align: left;
+  line-height: 1.6;
     
   background-color: #D9D0C1;
 }

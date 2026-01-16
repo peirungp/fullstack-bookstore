@@ -176,6 +176,14 @@
     font-size: 1.5rem;
   }
 
+  .carousel__left-arrow {
+  left: -10px;
+}
+
+.carousel__right-arrow {
+  right: -10px;
+}
+
   .carousel__card-image-wrapper {
     padding-bottom: 120%;
   }
