@@ -45,19 +45,6 @@ An e-commerce bookstore where users can browse, filter, and purchase books acros
 6. Click "Delete" to remove products
 7. Click "My Account" to update personal information, change password
 
-
-###### Admin Account
-1. Generate a bcrypt hashed password:
-    ```js
-    (1) require('bcryptjs').hashSync('your password', 10)
-    (2) replace `<hashed_password>` with your desired password.
-
-2. Copy the generated hash and use it in the following SQL (replace `<hashed_password>`):
-    ```sql
-    INSERT INTO users (email, password_hash, first_name, last_name, is_admin)
-    VALUES ('admin', '<hashed_password>', 'Admin', '', 1);
-
-
 ###### Image Credits
 
 License Information:
