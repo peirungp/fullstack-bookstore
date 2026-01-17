@@ -59,9 +59,6 @@ An e-commerce bookstore where users can browse, filter, and purchase books acros
 
 
 ###### Image Credits
-** Test image URL
-- This link is for testing the image URL field when adding a new product:
-https://images.unsplash.com/photo-1612541831162-96d8fe7558f9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 
 License Information:
 https://unsplash.com/license
