@@ -43,7 +43,7 @@ export const ERRORLIST = {
   [SERVER.PRODUCT_NOT_FOUND]: 'Sorry, this product is no longer available.',
   [SERVER.CART_EMPTY]: 'Your cart is empty. please add some products to your cart.',
   [SERVER.INVALID_CURRENT_PASSWORD]: 'The current password you entered is incorrect. Please try again.',
-  [FORM.PRICE_ERROR]: 'Price must be greater than 1.00.',
+  [FORM.PRICE_ERROR]: 'Price must be greater than $1.',
   [FORM.REQUIRED_AREA]: 'Please fill in all required fields.',
   [FORM.REQUIRED_INPUT]: 'Please enter a message.',
   [FORM.REQUIRED_FILL_OUT]: 'Please fill out all the required fields',

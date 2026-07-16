@@ -22,16 +22,6 @@ function UpdateProduct({ onSubmit, onCancel, product, isNew = false }) {
   function handleEdit(e) {
     e.preventDefault();
 
-    if(!editingProduct.price || Number(editingProduct.price) <= 1) {
-    setError(FORM.PRICE_ERROR); 
-    return;
-  }
-
-    if(isNew && !imageFile) {
-      setError(FORM.IMAGE_REQUIRED);
-      return;
-    }
-
     if(!editingProduct.alt ||
         !editingProduct.title ||
         !editingProduct.author ||
@@ -40,22 +30,33 @@ function UpdateProduct({ onSubmit, onCancel, product, isNew = false }) {
     ) {
         setError(FORM.REQUIRED_AREA);
         return;
-      }
-        setError('');
-        const formData = new FormData();
+    }
+
+    if(isNew && !imageFile) {
+      setError(FORM.IMAGE_REQUIRED);
+      return;
+    }
+
+    if(!editingProduct.price || Number(editingProduct.price) <= 1) {
+    setError(FORM.PRICE_ERROR); 
+    return;
+    }
+
+    setError('');
+    const formData = new FormData();
 
     if(imageFile) {
       formData.append('image', imageFile);
     } else if(editingProduct.image) {
       formData.append('image', editingProduct.image);
     }
-        formData.append('alt', editingProduct.alt);
-        formData.append('genre', editingProduct.genre);
-        formData.append('title', editingProduct.title);
-        formData.append('author', editingProduct.author);
-        formData.append('text', editingProduct.text);
-        formData.append('price', editingProduct.price);
-        onSubmit(formData);
+    formData.append('alt', editingProduct.alt);
+    formData.append('genre', editingProduct.genre);
+    formData.append('title', editingProduct.title);
+    formData.append('author', editingProduct.author);
+    formData.append('text', editingProduct.text);
+    formData.append('price', editingProduct.price);
+    onSubmit(formData);
   }
 
   return (
@@ -115,6 +116,7 @@ function UpdateProduct({ onSubmit, onCancel, product, isNew = false }) {
       <label htmlFor="price">Price:
           <input 
             type="number"
+            min="0"
             value={editingProduct.price || ''} 
             onChange={(e) => updateField('price', Number(e.target.value))}
           />
