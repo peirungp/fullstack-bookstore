@@ -84,6 +84,7 @@ function App() {
     .catch( err => {
       if ( err.error === CLIENT.NO_SESSION ) {
         dispatch({ type: 'logout' });
+        return;
       }
       dispatch({ type: 'error', error: err.error });
     });
