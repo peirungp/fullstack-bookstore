@@ -8,7 +8,6 @@ An e-commerce bookstore where users can browse, filter, and purchase books acros
 - Frontend: React, Vite
 - Backend: Express.js, Node.js
 - Styling: CSS3
-- State Management: useReducer
 - Image Upload: Multer 
 - Cloud: Cloudinary
 - Database: MySQL (Dockerized)
@@ -16,7 +15,7 @@ An e-commerce bookstore where users can browse, filter, and purchase books acros
 
 #### Features
 * --User Features--
-- User Registration, login, logout,  add items, and checkout functionality
+- User Registration, login, logout, add items, and checkout functionality
 - Browse and filter books by category (Business Strategy, Fiction, Non-fiction, Fantacy)
 - Add items to shopping cart with quantity management and delete item functionality
 - Update personal information, password, change password, and view oreder history
