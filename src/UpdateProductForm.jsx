@@ -117,6 +117,7 @@ function UpdateProduct({ onSubmit, onCancel, product, isNew = false }) {
           <input 
             type="number"
             min="0"
+            sep="0.01"
             value={editingProduct.price || ''} 
             onChange={(e) => updateField('price', Number(e.target.value))}
           />
