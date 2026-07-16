@@ -36,7 +36,8 @@ function Cart({ cart, products, showCart, setShowCart, onUpdatedCart, onRemoveFr
     setSuccessMessage('Order placed successfully!');
     setTimeout(() => {
       setSuccessMessage(false);
-    }, 3000);
+      setShowCart(false);
+    }, 1000);
   }
     
 

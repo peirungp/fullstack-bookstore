@@ -127,6 +127,7 @@ function App() {
 
   function onLogout() {
     dispatch({ type: 'logout'});
+    dispatch({ type: 'cart-loaded', cart:{} })
     fetchLogout()
     .catch( err => {
       dispatch({ type: 'error', error: err.error });
